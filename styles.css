@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.title {
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(to right, #707e80, #9bbecc, #87c0d6, #58c9f5);
+  margin-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0.5rem;
+  height: 100vh;
+  margin: 0 5px;
+}
+
+.container div {
+  border: 1px solid black;
+  padding: 16px;
+  text-align: center;
+}
+
+.container div h2 {
+  padding: 8px;
+  border-top: 1px solid;
+}
+
+.chill {
+  background: #d2f4fc;
+}
+
+.chill:hover {
+  opacity: 0.7;
+  transition-duration: 0.5;
+  cursor: pointer;
+}
+
+.adventurous {
+  background: #deffe3;
+}
+
+.adventurous:hover {
+  opacity: 0.7;
+  transition-duration: 0.5;
+  cursor: pointer;
+}
+
+.contemplative {
+  background: #ebeff0;
+}
+
+.contemplative:hover {
+  opacity: 0.7;
+  transition-duration: 0.5;
+  cursor: pointer;
+}
+
+.celebratory {
+  background: #fff8e0;
+}
+
+.celebratory:hover {
+  opacity: 0.7;
+  transition-duration: 0.5;
+  cursor: pointer;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  display: none;
+  border: 1px solid black;
+  width: 60vw;
+  height: 60vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  background: white;
+  text-align: center;
+  padding: 24px;
+  border-radius: 3px;
+  box-shadow: 1px 2px 8px;
+}
+
+.beerImage {
+  border-bottom: 1px solid black;
+}
+
+.beerTitle {
+  padding: 5px;
+  font-weight: 400;
+}
+
+.beerType {
+  padding-bottom: 8px;
+  font-weight: 400;
+  color: grey;
+}
+
+.beerDescription {
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .modal {
+    width: 70vw;
+    height: 60vh;
+    overflow: scroll;
+  }
+}
